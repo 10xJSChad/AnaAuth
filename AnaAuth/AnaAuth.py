@@ -66,7 +66,7 @@ class AnaAuthentication():
       return(True, user)
     return(False, "Incorrect login information")
 
-  def isUserLoggedIn(self, username, ip, token): #THIS ONE NEEDS SOME SERIOUS TESTING
+  def isUserLoggedIn(self, username, ip, token):
     user = self.getUserByName(username, True)
     if user == None: return(False, "User does not exist")
     if user.ip == ip and user.token == token: return(True, user)
